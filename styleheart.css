@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: url(/img/photo-1534790021298-16d65d290461.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+span {
+    background: url(/img/5ae77de86a2c97a40166a49f5cc46660-0.png);
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+
+    100% {
+        transform: translate(-50%, -500%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+
+}
