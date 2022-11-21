@@ -137,11 +137,12 @@ h2 {
     .sidebar-1 {
         order: -1;
     }
+
 } 
 
 ul li{
     font-size: 15px;
-    list-style: none;
+    color: #fff;
 }
 
 ul a {
@@ -150,12 +151,79 @@ ul a {
     text-align: center;
     cursor: pointer;
 }
-ul a:hover {
-    text-transform: uppercase;
 
+ul a:hover {
+    text-decoration:underline;
 }
 
+/* to do list*/
 
+
+@media (min-width: 768px) {
+
+.form{
+    position: absolute;
+    top: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+    width: 400px;
+    background-color:yellow;
+    border-radius: 10px;
+}
+
+.input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.input::placeholder{
+    color: #222;
+}
+
+.list{
+    padding: 0;
+    margin: 0;
+}
+
+.list li{
+    list-style-type: none;
+    padding: 20px;
+    font-family: cursive;
+    border-top: dotted;
+    border-color: darkgray;
+    position: relative;
+}
+
+.list li .fa-trash{
+    color: red;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(100%);
+    cursor: pointer;
+}
+.list li .fa-check-square{
+    color: green;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(10%);
+    cursor: pointer;
+}
+
+.list li.checked {
+    color: darkgray;
+    text-decoration: line-through;
+}
+
+.list li.checked .fa-check-square{
+    color: darkgray;
+}
+}
 
 /* Media Querys*/
 
@@ -166,4 +234,12 @@ ul a:hover {
 
     }
 
+    .contenido-principal {
+        text-align: center;
+
+    }
+
+    ul li {
+        text-align: center;
+    }
 }
