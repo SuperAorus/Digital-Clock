@@ -1,19 +1,42 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+
+
 body {
     font-family: sans-serif;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100vh;
-    justify-content: center;
     background-image: url(img/photo-1534790021298-16d65d290461.avif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
-
 }
-
 
 h2 {
     text-transform: uppercase;
@@ -21,8 +44,33 @@ h2 {
     color: #fff;
     font-size: 14px;
     text-align: center; 
-}   
+}  
 
+.contenedor {
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Digital Clock */
+.clock1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+}
 .clock {
     display: flex;
 }
@@ -62,6 +110,54 @@ h2 {
     font-size: 20px;
     background: green;
 }
+
+
+/* pruebas */
+
+@media (min-width: 768px) {
+    .contenedor-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenido-principal {
+        flex-basis: calc(50% - 1rem);
+        gap: 2rem;
+        text-align: center;
+
+    }
+
+    .sidebar {
+        flex-basis: calc(25% - 1rem);
+        padding: 2rem;
+    }
+
+    .sidebar h2 {
+        color: #222;
+    }
+    .sidebar-1 {
+        order: -1;
+    }
+} 
+
+ul li{
+    font-size: 15px;
+    list-style: none;
+}
+
+ul a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+ul a:hover {
+    text-transform: uppercase;
+
+}
+
+
+
+/* Media Querys*/
 
 @media (max-width: 767px) {
     .clock span {
